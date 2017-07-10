@@ -8,7 +8,7 @@ public class Triangle implements Shape{
     private Long b;
     private Long c;
 
-    Triangle(long a, long b, long c) {
+    public Triangle(long a, long b, long c) {
         this.a = a;
         this.b = b;
         this.c = c;

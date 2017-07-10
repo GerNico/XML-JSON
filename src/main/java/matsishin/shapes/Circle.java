@@ -6,7 +6,7 @@ public class Circle implements Shape {
     }
     private Long radii;
 
-    Circle(long radii) {
+    public Circle(long radii) {
         this.radii = radii;
     }
 

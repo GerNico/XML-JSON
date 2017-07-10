@@ -4,11 +4,11 @@
   <OriginalElement />
   <nodes>
     <node x="179.5" y="0.0">matsishin.shapes.Shape</node>
+    <node x="668.1804733727811" y="-65.56804733727813">matsishin.shapes.BoxOfShapes</node>
+    <node x="686.8491124260354" y="114.81656804733723">matsishin.converter.Converter</node>
     <node x="0.0" y="104.0">matsishin.shapes.Triangle</node>
     <node x="188.0" y="127.0">matsishin.shapes.Circle</node>
     <node x="354.0" y="127.0">matsishin.shapes.Square</node>
-    <node x="-242.8254437869823" y="30.06804733727813">matsishin.shapes.Main</node>
-    <node x="-348.28106508875743" y="135.63017751479288">matsishin.shapes.Converter</node>
   </nodes>
   <notes />
   <edges>
@@ -29,9 +29,9 @@
       <point x="-54.33333333333334" y="27.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.720682302771855" x="249.0" y="224.50000000000003" />
+  <settings layout="Hierarchic Group" zoom="0.720682302771855" x="602.8313609467455" y="125.78846153846152" />
   <SelectedNodes>
-    <node>matsishin.shapes.Converter</node>
+    <node>matsishin.shapes.BoxOfShapes</node>
   </SelectedNodes>
   <Categories>
     <Category>Fields</Category>

@@ -8,7 +8,7 @@ public class Square implements Shape {
         return side>0;
     }
 
-    Square(long side) {
+    public Square(long side) {
         this.side = side;
     }
 
