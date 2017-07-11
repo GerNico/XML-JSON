@@ -3,35 +3,43 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="179.5" y="0.0">matsishin.shapes.Shape</node>
-    <node x="668.1804733727811" y="-65.56804733727813">matsishin.shapes.BoxOfShapes</node>
-    <node x="686.8491124260354" y="114.81656804733723">matsishin.converter.Converter</node>
-    <node x="0.0" y="104.0">matsishin.shapes.Triangle</node>
-    <node x="188.0" y="127.0">matsishin.shapes.Circle</node>
-    <node x="354.0" y="127.0">matsishin.shapes.Square</node>
+    <node x="244.0" y="0.0">matsishin.shapes.Shape</node>
+    <node x="330.0" y="104.0">matsishin.shapes.Triangle</node>
+    <node x="-343.4072022160665" y="53.51800554016626">matsishin.converter.Converter</node>
+    <node x="518.0" y="115.5">matsishin.shapes.BoxOfShapes</node>
+    <node x="164.0" y="127.0">matsishin.shapes.Circle</node>
+    <node x="0.0" y="127.0">matsishin.shapes.Square</node>
   </nodes>
   <notes />
   <edges>
     <edge source="matsishin.shapes.Square" target="matsishin.shapes.Shape">
       <point x="0.0" y="-39.0" />
-      <point x="426.0" y="79.0" />
-      <point x="315.33333333333337" y="79.0" />
-      <point x="54.33333333333337" y="27.0" />
+      <point x="72.0" y="74.0" />
+      <point x="264.375" y="74.0" />
+      <point x="-61.125" y="27.0" />
     </edge>
     <edge source="matsishin.shapes.Circle" target="matsishin.shapes.Shape">
       <point x="0.0" y="-39.0" />
-      <point x="0.0" y="27.0" />
+      <point x="237.0" y="84.0" />
+      <point x="305.125" y="84.0" />
+      <point x="-20.375" y="27.0" />
     </edge>
     <edge source="matsishin.shapes.Triangle" target="matsishin.shapes.Shape">
       <point x="0.0" y="-62.0" />
-      <point x="84.0" y="79.0" />
-      <point x="206.66666666666666" y="79.0" />
-      <point x="-54.33333333333334" y="27.0" />
+      <point x="414.0" y="84.0" />
+      <point x="345.875" y="84.0" />
+      <point x="20.375" y="27.0" />
+    </edge>
+    <edge source="matsishin.shapes.BoxOfShapes" target="matsishin.shapes.Shape">
+      <point x="0.0" y="-50.5" />
+      <point x="629.0" y="74.0" />
+      <point x="386.625" y="74.0" />
+      <point x="61.125" y="27.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.720682302771855" x="602.8313609467455" y="125.78846153846152" />
+  <settings layout="Hierarchic Group" zoom="0.6697588126159555" x="249.0" y="259.5" />
   <SelectedNodes>
-    <node>matsishin.shapes.BoxOfShapes</node>
+    <node>matsishin.converter.Converter</node>
   </SelectedNodes>
   <Categories>
     <Category>Fields</Category>

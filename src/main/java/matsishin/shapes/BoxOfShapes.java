@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BoxOfShapes {
-    List<Shape> shapes = null;
+    private List<Shape> shapes = null;
 
     public BoxOfShapes() {
         shapes=new ArrayList<>();
