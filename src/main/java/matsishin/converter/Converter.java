@@ -16,7 +16,7 @@ class Converter {
         StringBuilder stringBuilder = new StringBuilder();
         Field[] publicFields = clazz.getDeclaredFields();
 
-        stringBuilder.append(XML_OBJECT_b1).append(clazz.getName()).append(XML_OBJECT_b2);
+        stringBuilder.append(XML_OBJECT_B1).append(clazz.getName()).append(XML_OBJECT_B2);
 
         if (object instanceof Iterable) {
             Iterable iterable = (Iterable) object;
@@ -24,7 +24,7 @@ class Converter {
                 stringBuilder.append(plainObjectToXML(current));
             }
         } else {
-            stringBuilder.append(XML_Fields_b);
+            stringBuilder.append(XML_Fields_B);
             for (Field field : publicFields) {
                 field.setAccessible(true);
                 try {
@@ -32,17 +32,17 @@ class Converter {
                     if (current instanceof Iterable) {
                         stringBuilder.append(plainObjectToXML(current));
                     } else {
-                        stringBuilder.append(XML_b1).append(field.getName()).append(XML_b2)
+                        stringBuilder.append(XML_B1).append(field.getName()).append(XML_B2)
                                 .append(current)
-                                .append(XML_e1).append(field.getName()).append(XML_e2);
+                                .append(XML_E1).append(field.getName()).append(XML_E2);
                     }
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 }
             }
-            stringBuilder.append(XML_Fields_e);
+            stringBuilder.append(XML_Fields_E);
         }
-        stringBuilder.append(XML_OBJECT_e);
+        stringBuilder.append(XML_OBJECT_E);
         return stringBuilder.toString();
     }
 
@@ -52,19 +52,19 @@ class Converter {
         StringBuilder stringBuilder = new StringBuilder();
         Field[] publicFields = clazz.getDeclaredFields();
 
-        stringBuilder.append(JSON_OBJECT_b1).append(clazz.getName()).append(JSON_OBJECT_b2);
+        stringBuilder.append(JSON_OBJECT_B1).append(clazz.getName()).append(JSON_OBJECT_B2);
         if (object instanceof Iterable) {
-            StringJoiner stringJoiner = new StringJoiner(JSON_delimiter);
+            StringJoiner stringJoiner = new StringJoiner(JSON_DELIMITER);
             Iterable iterable = (Iterable) object;
-            stringBuilder.append(JSON_list_b);
+            stringBuilder.append(JSON_LIST_B);
             for (Object current : iterable) {
                 stringJoiner.add(convertToJSON(current));
             }
             stringBuilder.append(stringJoiner);
-            stringBuilder.append(JSON_list_e);
+            stringBuilder.append(JSON_LIST_E);
         } else {
-            stringBuilder.append(JSON_Fields_b);
-            StringJoiner stringJoiner = new StringJoiner(JSON_delimiter);
+            stringBuilder.append(JSON_FIELDS_B);
+            StringJoiner stringJoiner = new StringJoiner(JSON_DELIMITER);
             for (Field field : publicFields) {
                 field.setAccessible(true);
                 try {
@@ -72,16 +72,16 @@ class Converter {
                     if (current instanceof Iterable) {
                         stringJoiner.add(convertToJSON(current));
                     } else {
-                        stringJoiner.add(JSON_name_b + field.getName() + JSON_name_e + current);
+                        stringJoiner.add(JSON_NAME_B + field.getName() + JSON_NAME_E + current);
                     }
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 }
             }
             stringBuilder.append(stringJoiner);
-            stringBuilder.append(JSON_list_e);
+            stringBuilder.append(JSON_LIST_E);
         }
-        stringBuilder.append(JSON_e);
+        stringBuilder.append(JSON_E);
         return stringBuilder.toString();
     }
 }
