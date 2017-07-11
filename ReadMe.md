@@ -12,4 +12,5 @@ The conversion was made using java.lang.reflect and recursive visiting of all it
 There are two methods, in the class Converter, they make the conversion: 
 * ) String convertToJSON(Object object) 
 * ) String convertToXML(Object object)
+
 Also in this task, I have made big testing class ConverterTest. It helps to discover the behaviour of the converter.
