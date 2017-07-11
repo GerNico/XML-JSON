@@ -10,6 +10,7 @@ According to the task, it was created 3 classes implementing interface Shape. Al
 this class contains List of Shapes. Class BoxOfShapes was used in order to clarify the difference between composition and aggregation during conversion to JSON/XML.
 The conversion was made using java.lang.reflect and recursive visiting of all iterable fields. 
 There are two methods, in the class Converter, they make the conversion: 
-1 ) String convertToJSON(Object object) 
-2 ) String convertToXML(Object object)
+* ) String convertToJSON(Object object) 
+* ) String convertToXML(Object object)
+
 Also in this task, I have made big testing class ConverterTest. It helps to discover the behaviour of the converter.
