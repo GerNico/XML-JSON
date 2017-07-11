@@ -17,9 +17,11 @@ public class ConverterTest {
         String expectedTriangle =
                 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                         "<Object id=\"matsishin.shapes.Triangle\">\n" +
+                        "<Fields>\n" +
                         "<a>3</a>\n" +
                         "<b>4</b>\n" +
                         "<c>5</c>\n" +
+                        "</Fields>\n" +
                         "</Object>\n";
         String convertedTriangle = converter.convertToXML(triangle);
         assertTrue("Troubles with triangle", expectedTriangle.equals(convertedTriangle));
@@ -28,7 +30,9 @@ public class ConverterTest {
         String expectedCircle =
                 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                         "<Object id=\"matsishin.shapes.Circle\">\n" +
+                        "<Fields>\n" +
                         "<radii>5</radii>\n" +
+                        "</Fields>\n" +
                         "</Object>\n";
         String convertedCircle = converter.convertToXML(circle);
         assertTrue("Troubles with circle", expectedCircle.equals(convertedCircle));
@@ -37,7 +41,9 @@ public class ConverterTest {
         String expectedSquare =
                 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                         "<Object id=\"matsishin.shapes.Square\">\n" +
+                        "<Fields>\n" +
                         "<side>4</side>\n" +
+                        "</Fields>\n" +
                         "</Object>\n";
         String convertedSquare = converter.convertToXML(square);
         assertTrue("Troubles with square", expectedSquare.equals(convertedSquare));
@@ -53,18 +59,25 @@ public class ConverterTest {
         shapes.add(triangle);
         shapes.add(circle);
         shapes.add(square);
-        String expectedXML="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+        String expectedXML=
+                "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                 "<Object id=\"java.util.ArrayList\">\n" +
                 "<Object id=\"matsishin.shapes.Triangle\">\n" +
+                "<Fields>\n" +
                 "<a>32</a>\n" +
                 "<b>41</b>\n" +
                 "<c>15</c>\n" +
+                "</Fields>\n" +
                 "</Object>\n" +
                 "<Object id=\"matsishin.shapes.Circle\">\n" +
+                "<Fields>\n" +
                 "<radii>10</radii>\n" +
+                "</Fields>\n" +
                 "</Object>\n" +
                 "<Object id=\"matsishin.shapes.Square\">\n" +
+                "<Fields>\n" +
                 "<side>14</side>\n" +
+                "</Fields>\n" +
                 "</Object>\n" +
                 "</Object>\n";
         String convertedXML=converter.convertToXML(shapes);
@@ -81,21 +94,30 @@ public class ConverterTest {
         boxOfShapes.add(triangle);
         boxOfShapes.add(circle);
         boxOfShapes.add(square);
-        String expectedXML="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+        String expectedXML=
+                "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                 "<Object id=\"matsishin.shapes.BoxOfShapes\">\n" +
+                "<Fields>\n" +
                 "<Object id=\"java.util.ArrayList\">\n" +
                 "<Object id=\"matsishin.shapes.Triangle\">\n" +
+                "<Fields>\n" +
                 "<a>32</a>\n" +
                 "<b>41</b>\n" +
                 "<c>15</c>\n" +
+                "</Fields>\n" +
                 "</Object>\n" +
                 "<Object id=\"matsishin.shapes.Circle\">\n" +
+                "<Fields>\n" +
                 "<radii>10</radii>\n" +
+                "</Fields>\n" +
                 "</Object>\n" +
                 "<Object id=\"matsishin.shapes.Square\">\n" +
+                "<Fields>\n" +
                 "<side>14</side>\n" +
+                "</Fields>\n" +
                 "</Object>\n" +
                 "</Object>\n" +
+                "</Fields>\n" +
                 "</Object>\n";
         String convertedXML=converter.convertToXML(boxOfShapes);
         assertTrue("Bad format of Box",expectedXML.equals(convertedXML));

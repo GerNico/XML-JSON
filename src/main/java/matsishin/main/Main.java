@@ -17,10 +17,10 @@ public class Main {
 
         Triangle triangle=new Triangle(4,5,6);
         System.out.println(myConverter.convertToXML(triangle));
-        System.out.println(myConverter.convertToJSON(triangle));
+//        System.out.println(myConverter.convertToJSON(triangle));
 
-        System.out.println(myConverter.convertToXML(boxOfShapes));
+//        System.out.println(myConverter.convertToXML(boxOfShapes));
         System.out.println();
-        System.out.println(myConverter.convertToJSON(boxOfShapes));
+//        System.out.println(myConverter.convertToJSON(boxOfShapes));
     }
 }

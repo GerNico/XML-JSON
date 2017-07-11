@@ -25,13 +25,14 @@ public class Converter {
                 stringBuilder.append(plainObjectToXML(current));
             }
         } else {
+            stringBuilder.append(XML_Fields_b);
             for (Field field : publicFields) {
                 field.setAccessible(true);
                 try {
-                    Object current=field.get(object);
-                    if (current instanceof Iterable){
+                    Object current = field.get(object);
+                    if (current instanceof Iterable) {
                         stringBuilder.append(plainObjectToXML(current));
-                    }else {
+                    } else {
                         stringBuilder.append(XML_b1).append(field.getName()).append(XML_b2)
                                 .append(current)
                                 .append(XML_e1).append(field.getName()).append(XML_e2);
@@ -40,6 +41,7 @@ public class Converter {
                     e.printStackTrace();
                 }
             }
+            stringBuilder.append(XML_Fields_e);
         }
         stringBuilder.append(XML_OBJECT_e);
         return stringBuilder.toString();
