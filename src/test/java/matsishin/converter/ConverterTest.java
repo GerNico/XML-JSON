@@ -166,7 +166,6 @@ public class ConverterTest {
                         "</Object>";
         String convertedXML = converter.convertToXML(deepArray);
         assertTrue("Bad format of Box", expectedXML.equals(convertedXML));
-//        System.out.println(convertedXML);
     }
 
     @Test
